@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
@@ -23,6 +23,20 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
 
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader'] //read images or sources
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'imgs'
+                    }
+                }
             }
         ]
     },
