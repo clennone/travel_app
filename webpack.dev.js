@@ -4,7 +4,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 //clean webpack files unleast rm -rf dist &&
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 module.exports = {
     mode: 'development',
     entry: './src/client/index.js',
