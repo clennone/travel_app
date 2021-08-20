@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+</head>
+<body>
+    <header id="header">
+        <h1 id="header_title">Trip Planner Adventure</h1>
+    </header>
+    <main>
+        <section class="destiny">
+            <h2>What's Your New Destination?</h2>
+            <form class="form_destiny">
+                <div class="fields__destiny">
+                    <div class="field__1">
+                        <input id="destiny" type="text" placeholder="Where will you go?" required>
+                    </div>
+                    <div class="field__2">
+                        <input id="start_date" name="start_date" type="date" required>
+                    </div>
+                    <div class="field__3">
+                        <input id="final_date" name="final_date" type="date" required>
+                    </div>
+                    <div class="field__04">
+                        <button id="btn_submit" type="submit" class="btn">Look the trip</button></a>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="card_adv" id="adventure">
+            <div class="trips__message">
+                <div class="trips__update"></div>
+                <!-- <div class="trips__status">
+			        <span class="trips__num">You have 0 trip</span>
+		        </div> -->
+            </div>
+            <ul class="travel_card"></ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <h3 id="footer_title">Hope you enjoy our app // Credits: Christian Lennon</h3>
+    </footer>
+
+</body>
+</html>

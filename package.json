@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node src/server/index.js" 
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/clennone/travel_app_christian/issues"
   },
-  "homepage": "https://github.com/clennone/travel_app_christian#readme"
+  "homepage": "https://github.com/clennone/travel_app_christian#readme",
+  "dependencies": {
+    "babel-jest": "^27.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node": "^16.6.1",
+    "node-fetch": "^2.6.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "jest": "^27.0.6"
+  }
 }
