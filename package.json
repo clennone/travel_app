@@ -1,0 +1,20 @@
+{
+  "name": "travelapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clennone/travel_app_christian.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clennone/travel_app_christian/issues"
+  },
+  "homepage": "https://github.com/clennone/travel_app_christian#readme"
+}
