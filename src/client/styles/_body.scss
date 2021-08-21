@@ -43,9 +43,6 @@ body {
         grid-template-rows: repeat(4, 1fr);
         row-gap: 1rem;
     }
-    .field__1{
-        
-    }
     @media screen and (min-width: base.$tablet) {
         margin: 2rem 8rem;
         .title{
