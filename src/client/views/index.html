@@ -7,16 +7,16 @@
     <title>Travel App</title>
 </head>
 <body>
-    <header id="header">
-        <h1 id="header_title">Trip Planner Adventure</h1>
+    <header class="header">
+        <h1 class="title">Trip Adventure</h1>
     </header>
     <main>
         <section class="destiny">
-            <h2>What's Your New Destination?</h2>
-            <form class="form_destiny">
+            <h2 class="title">Hi!, where's your destiny?</h2>
+            <form class="form">
                 <div class="fields__destiny">
                     <div class="field__1">
-                        <input id="destiny" type="text" placeholder="Where will you go?" required>
+                        <input id="destiny" type="text" placeholder="Insert City: (Example:Mexico)" required>
                     </div>
                     <div class="field__2">
                         <input id="start_date" name="start_date" type="date" required>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </form>
-        </section>
+        </section> <!--destiny closer-->
 
         <section class="card_adv" id="adventure">
             <div class="trips__message">
@@ -39,8 +39,9 @@
 		        </div> -->
             </div>
             <ul class="travel_card"></ul>
-        </section>
-    </main>
+        </section> <!--card closer-->
+    </main> <!--main closer-->
+
     <footer id="footer">
         <h3 id="footer_title">Hope you enjoy our app // Credits: Christian Lennon</h3>
     </footer>

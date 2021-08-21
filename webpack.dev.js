@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-//clean webpack files unleast rm -rf dist &&
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -12,7 +10,11 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
-    module: {
+    devServer: {
+        port: 3000,
+        open: true
+    },
+    module: { 
         rules: [
             {
                 test: /\.js$/,
@@ -29,7 +31,7 @@ module.exports = {
                 use: ['html-loader'] //read images or sources
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
+                test: /\.(svg|png|jpg|gif)$/i,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -42,17 +44,8 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/cliente/views/index.html',
+            template: './src/client/views/index.html',
             filename: './index.html'
-        }),
-        new CleanWebpackPlugin({
-            //simulate remove files
-            dry: true,
-            //write logs to the console
-            verbose: true,
-            //remove all unused webpack assets on rebuild
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
         })
     ]
 }

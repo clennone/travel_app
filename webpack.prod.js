@@ -13,7 +13,7 @@ module.exports = {
     entry: './src/client/index.js',
     output: {
         filename: 'main.[hash].js',
-        path: path.resolve(__dirname, 'dist'),
+        // path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'var',
         library: 'Client'
     },
@@ -29,7 +29,7 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.scss$/,
+                test: /\.scss$/i,
                 use: [ MiniCssExtractPlugin.loader , 'css-loader', 'sass-loader']
             },
             {
@@ -37,12 +37,12 @@ module.exports = {
                 use: ['html-loader'] //read images or sources
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
+                test: /\.(svg|png|jpg|gif)$/i,
                 use: {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[hash].[ext]',
-                        outputPath: 'imgs'
+                        outputPath: 'img'
                     }
                 }
             }
@@ -53,7 +53,7 @@ module.exports = {
             template: './src/client/views/index.html',
             filename: './index.html'
         }),
-        new MiniCssExtractPlugin({filename: '[name].css'}),
+        new MiniCssExtractPlugin({filename: 'styles.css'}),
         new CleanWebpackPlugin({
             //simulate remove files
             dry: true,
