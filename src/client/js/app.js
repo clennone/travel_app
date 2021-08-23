@@ -3,13 +3,14 @@ import { validateValue } from "./validateValue";
 
 
 const btnSubmit = document.getElementById('btn_submit');
-    function getIt() {
-        btnSubmit.addEventListener('click',function(e){
-            e.preventDefault();
-            
-            validateValue();
 
-        })
+function getIt() {
+    btnSubmit.addEventListener('click',function(e){
+        e.preventDefault();
+        
+        validateValue();
+
+    })
 }
 
 

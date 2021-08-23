@@ -1,4 +1,4 @@
-import { validateDates } from "./validateDates";
+import { betweenDates, leftDates, validateDates } from "./validateDates";
 
 const city = document.getElementById('destiny');
 const startDate = document.getElementById('start_date');
@@ -13,7 +13,10 @@ export const validateValue = () =>{
         const initial = startDate.value;
         const ending = finalDate.value;
 
-        console.log(validateDates(initial,ending));
+        const daysLeft = leftDates(initial);
+        const daysIn = betweenDates(initial,ending);
+
+        
 
         cleanValue();
     }
