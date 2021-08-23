@@ -1,0 +1,47 @@
+@use './base';
+
+.header {
+    background-image: url(../assets/images/travel-app-1.jpg);
+    height: 70rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .header__text{
+        text-align: center;
+        color: base.$color-base;
+        margin-top: 5rem;
+        @media(min-width: base.$tablet){
+            margin-top: 15rem;
+        } 
+    }
+}
+
+.logo{  
+    color: base.$color-base;
+    .name{
+        font-weight: 400;
+        
+    }
+}
+.name__bold{
+    font-weight: 700;
+}
+@media (min-width: base.$tablet){
+    .bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.nav__links{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: base.$color-bckg;
+    
+}

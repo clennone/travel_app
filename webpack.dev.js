@@ -22,7 +22,7 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.scss$/,
+                test: /.(css|scss|sass)$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']
 
             },
@@ -31,14 +31,8 @@ module.exports = {
                 use: ['html-loader'] //read images or sources
             },
             {
-                test: /\.(svg|png|jpg|gif)$/i,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'imgs'
-                    }
-                }
+                type: "asset",
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
             }
         ]
     },

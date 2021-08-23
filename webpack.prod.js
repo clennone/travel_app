@@ -21,6 +21,10 @@ module.exports = {
     optimization: {
         minimizer: [new TerserPlugin({}), new CssMinimizerPlugin({})]
     },
+    performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+   },
     module:{
         rules: [
             {
@@ -29,7 +33,7 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.scss$/i,
+                test: /.(css|scss|sass)$/i,
                 use: [ MiniCssExtractPlugin.loader , 'css-loader', 'sass-loader']
             },
             {
@@ -37,14 +41,16 @@ module.exports = {
                 use: ['html-loader'] //read images or sources
             },
             {
-                test: /\.(svg|png|jpg|gif)$/i,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'img'
-                    }
-                }
+                type: "asset",
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                // test: /\.(svg|png|jpg|gif)$/i,
+                // use: {
+                //     loader: 'file-loader',
+                //     // options: {
+                //     //     name: '[name].[hash].[ext]',
+                //     //     outputPath: 'img'
+                //     // }
+                // }
             }
         ]
     },

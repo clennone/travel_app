@@ -8,29 +8,43 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="title">Trip Adventure</h1>
-    </header>
-    <main>
+        <div class="container">
+            <div class="bar">
+                <a href="index.html" class="logo">
+                    <h1 class="name no-margin center-text">Travel<span class="name__bold">app</span></h1>
+                </a>
+
+                <nav class="nav">
+                    <a href="#" class="nav__links name__bold">Favorite</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__text">
+            <h2 class="no-margin">Where's your new destiny?</h2>
+            <p class="no-margin">Schedule with our travel planner<p>
+        </div>
         <section class="destiny">
-            <h2 class="title">Hi!, where's your destiny?</h2>
             <form class="form">
                 <div class="fields__destiny">
                     <div class="field__1">
-                        <input id="destiny" type="text" placeholder="Insert City: (Example:Mexico)" required>
+                        <input class="input" id="destiny" type="text" placeholder="Insert City: (Example:Mexico)" required>
                     </div>
                     <div class="field__2">
-                        <input id="start_date" name="start_date" type="date" required>
+                        <label for="start_date" class="label_date">Start Date:</label>
+                        <input class="input date" id="start_date" name="start_date" type="date" placeholder="Start on date" required>
                     </div>
                     <div class="field__3">
-                        <input id="final_date" name="final_date" type="date" required>
+                        <label for="start_date" class="label_date">Finish Date:</label>
+                        <input class="input date" id="final_date" name="final_date" type="date" required>
                     </div>
-                    <div class="field__04">
+                    <div class="field__4">
                         <button id="btn_submit" type="submit" class="btn">Look the trip</button></a>
                     </div>
                 </div>
             </form>
         </section> <!--destiny closer-->
-
+    </header>+
+    <main>
         <section class="card_adv" id="adventure">
             <div class="trips__message">
                 <div class="trips__update"></div>
@@ -43,7 +57,7 @@
     </main> <!--main closer-->
 
     <footer id="footer">
-        <h3 id="footer_title">Hope you enjoy our app // Credits: Christian Lennon</h3>
+        <h6 id="footer_title">Hope you enjoy our app // Credits: Christian Lennon</h6>
     </footer>
 
     <script>

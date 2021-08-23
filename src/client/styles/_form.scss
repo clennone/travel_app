@@ -1,0 +1,67 @@
+@use './base';
+
+.destiny{
+    max-width: 800rem;
+    width: 70%; 
+    margin: 0 auto;
+}
+
+.form{
+    background-color: base.$color-form;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    height: auto;
+    padding: 2rem;
+    // width: 320px;
+    .fields__destiny{
+        height: auto;
+        position: relative;
+        width: 100%;
+        .input {
+            background-color: #43455c;
+            border-radius: 1.2rem;
+            border: 0;
+            box-sizing: border-box;
+            color: #eee;
+            // font-size: 1.2rem;
+            height: 100%;
+            outline: 0;
+            padding: .4rem 2rem 0;
+            width: 100%;
+    
+          }
+          .label_date{
+             color: #eee;
+             font-family: base.$font-body;
+             font-size: 1.2rem;
+             margin: 0;
+             padding: 0;
+          }
+          .date{
+            height: 50%;
+        }
+    }
+}
+
+@media(min-width: base.$tablet){
+    .fields__destiny{
+    display: grid;
+    grid-template-areas: "a a a a" 
+                         "s s e e"
+                         "d d d d";
+    gap: 2rem;
+    }
+    .field__1{
+        grid-area: a;
+        
+    }
+    .field__2{
+        grid-area: s;
+    }
+    .field__3{
+        grid-area: e;
+    }
+    .field__4{
+        grid-area: d;
+    }
+}

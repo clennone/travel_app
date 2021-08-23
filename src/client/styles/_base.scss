@@ -1,14 +1,14 @@
-//font variables
-$font-base: helvetica, sans-serif;
-$font-main: arial;
-$font-second: arial;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel:wght@400;700&display=swap');
+
+$font-header: 'Alfa Slab One', cursive;
+$font-body: 'Cinzel', serif;
 
 // color variables
 $color-base: #F6F4F6;
 $color-bckg: #424B54;
-$color-status: #E1CE7A;
+$color-form: #15172b;
 $color-border: #EBCFB2;
-$color-link: #C5BAAF;
+$color-link: #da480f;
 $darkest: #000;
 $light: #fff;
 
@@ -16,20 +16,8 @@ $light: #fff;
 $tablet: 768px;
 $web: 1200px;
 
-//fonts 
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Kaisei+Decol:wght@400;700&family=Lobster&family=Rubik:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playball&display=swap');
-
-$market-font: 'Permanent Marker';
-$playball-font: 'Playball';
-
-$allison-font: 'Allison';
-$kaisei-font: 'Kaisei Decol';
-$rubik-font: 'Rubik';
-$lobster-font: 'Lobster';
 
 //mixin variable
-
 @mixin display-flex-column {
     display: flex;
     flex-direction: column;
