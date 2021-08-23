@@ -6,6 +6,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    margin: 0;
+    padding: 0;
     .header__text{
         text-align: center;
         color: base.$color-base;
@@ -18,9 +20,13 @@
 
 .logo{  
     color: base.$color-base;
+    transition: 1s;
     .name{
         font-weight: 400;
-        
+    }
+    &:hover{
+        color: base.$color-bckg;
+        transition: 2s;
     }
 }
 .name__bold{
@@ -35,6 +41,7 @@
     .nav {
         display: flex;
         gap: 2rem;
+
     }
 }
 
@@ -42,6 +49,11 @@
     display: block;
     text-align: center;
     font-size: 1.8rem;
-    color: base.$color-bckg;
+    color: base.$color-border;
+    transition: 1s;
+    &:hover{
+        color: base.$color-bckg;
+        transition: 2s;
+    }
     
 }

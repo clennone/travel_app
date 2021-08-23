@@ -42,15 +42,7 @@ module.exports = {
             },
             {
                 type: "asset",
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                // test: /\.(svg|png|jpg|gif)$/i,
-                // use: {
-                //     loader: 'file-loader',
-                //     // options: {
-                //     //     name: '[name].[hash].[ext]',
-                //     //     outputPath: 'img'
-                //     // }
-                // }
+                test: /\.(png|svg|jpg|jpeg|gif)$/i
             }
         ]
     },

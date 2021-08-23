@@ -15,8 +15,12 @@ app.use(express.static('dist'));
 
 app.listen(PORT, () => console.log(`APP Travel on server ${PORT}`));
 
-app.get('/', (req,res)=>{
-    res.sendFile(path.re)
+app.get('/', (req, res) => {
+    res.sendFile("dist/index.html")
 })
+
+
+
+  
 
 
