@@ -20,7 +20,11 @@ export const validateValue = () =>{
 
         cleanValue();
 
-        return cityName;
+        return {
+            cityName,
+            daysLeft,
+            daysIn
+        }
     }
 }
 

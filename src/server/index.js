@@ -34,7 +34,7 @@ app.post('/geoname', async(req,res)=>{
     await fetch(`${geoAPI}${text}&${rows}&username=${geoUser}`)
         .then(response => response.json())
         .then(data => res.send(data))
-        // .catch(err => console.log(err,'error'));
+        .catch(err => console.log(err,'error'));
 })
 
 
