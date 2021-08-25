@@ -1,6 +1,6 @@
 import { betweenDates, leftDates, validateDates } from "./validateDates";
 
-const city = document.getElementById('destiny');
+const city = document.getElementById('city');
 const startDate = document.getElementById('start_date');
 const finalDate = document.getElementById('final_date');
 
@@ -19,6 +19,8 @@ export const validateValue = () =>{
         
 
         cleanValue();
+
+        return cityName;
     }
 }
 
