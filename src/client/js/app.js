@@ -1,26 +1,21 @@
 // get value 
 import { validateValue } from "./validateValue";
+import { getGeo } from "./getGeo";
+import { getWeather } from "./getWeather";
 
 const btnSubmit = document.getElementById('btn_submit');
 
 function getIt() {
-    btnSubmit.addEventListener('click',function(e){
+    btnSubmit.addEventListener('click',async function(e){
         e.preventDefault();
         
-        let {cityName,daysLeft,daysIn} = validateValue();
+        let {cityName,initial,ending,daysLeft,daysIn} = validateValue();
+        
+        const geo = await getGeo(cityName,initial,ending);
+        const weatherData = await getWeather(geo);
+        console.log(weatherData)
+        
 
-        fetch ('http://localhost:8000/geoname', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: { 
-                'Content-Type' : 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify({"city": cityName}),
-        })
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(error => console.log(error,'error'))
 
     })
 }
