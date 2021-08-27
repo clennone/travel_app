@@ -1,3 +1,5 @@
+import { sameDates } from "./validateDates";
+
 export const getGeo =  async(city,a,b) => {
     
     const response = await fetch ('http://localhost:8000/geoname', {
@@ -19,8 +21,10 @@ export const getGeo =  async(city,a,b) => {
         const geoLng= (newData.geonames[0].lng)
 
         const start = a
-        const end = b
+        //validate if the start day is the same as the end day to weather api
+        const end = sameDates(a,b)
 
+        console.log(end)
         return {geoName, geoCountry, geoLat, geoLng, start, end}
 
     }catch(err){

@@ -12,13 +12,18 @@ function getIt() {
         let {cityName,initial,ending,daysLeft,daysIn} = validateValue();
         
         const geo = await getGeo(cityName,initial,ending);
-        const weatherData = await getWeather(geo);
-        console.log(weatherData)
+        console.log(geo)
+        const weatherData = await getWeather(geo)
         
+        console.log(weatherData) 
+
+        const temp = weatherData.data[0].temp;
+        console.log(temp)
 
 
     })
 }
+
 
 
 export {getIt}

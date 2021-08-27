@@ -16,6 +16,7 @@ export const validateValue = () =>{
         const daysLeft = leftDates(initial);
         const daysIn = betweenDates(initial,ending);
 
+        
         // console.log(initial,ending)
 
         cleanValue();
