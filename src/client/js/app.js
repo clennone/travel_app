@@ -28,9 +28,9 @@ function getIt() {
             const img = await getImage(cityName,geo.geoCountry)
             console.log(img) 
 
-            const divCard = document.createElement('div') 
+            const divCard = document.createElement('div');
+            divCard.className = 'card-data';
             const contentCard = `
-            <div class="card-data">
                 <img src="${img}" alt="imagen" class="city-img">
                 <p class="stay-days">You'll Stay ${daysIn} days in:</p>
                 <p class="city-name">${cityName} - ${geo.geoCountry}</p>
@@ -49,11 +49,10 @@ function getIt() {
                     <p class="end-humidity">Humidity: 27</p>
                 </div>
                 <p class="city-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti expedita, laborum illum iste nam perspiciatis vero repellendus iusto possimus rerum eos similique distinctio itaque, accusantium corporis fugit magnam eaque enim!</p>
-                <p class="days-left">Days left: XX </p>
-            </div>  `;
+                <p class="days-left">Days left: XX </p>`;
             divCard.innerHTML=contentCard;
             const card = document.getElementById('card-info');
-            card.appendChild(divCard)
+            card.insertAdjacentElement("afterbegin",divCard)
             cleanValue();
         }
 
