@@ -1,11 +1,11 @@
-import { betweenDates, leftDates, validateDates } from "./validateDates";
+import { betweenDates, leftDates } from "./validateDates";
 
 const city = document.getElementById('city');
 const startDate = document.getElementById('start_date');
 const finalDate = document.getElementById('final_date');
 
 
-export const validateValue = () =>{
+export const validateValue =  () =>{
     if (city.value==='' || startDate.value.length===0 || finalDate.value.length===0){ 
         alert('You must enter all the fields');
     } else{
@@ -15,11 +15,6 @@ export const validateValue = () =>{
 
         const daysLeft = leftDates(initial);
         const daysIn = betweenDates(initial,ending);
-
-        
-        // console.log(initial,ending)
-
-        cleanValue();
 
         return {
             cityName,
@@ -31,8 +26,12 @@ export const validateValue = () =>{
     }
 }
 
-const cleanValue = () =>{
+export const cleanValue = () =>{
     city.value='';
     startDate.value='';
+    finalDate.value='';
+}
+
+export const cleanFinaldate = () => {
     finalDate.value='';
 }

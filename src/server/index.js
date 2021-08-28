@@ -6,6 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const { encode } = require('punycode');
+const { urlencoded } = require('body-parser');
 const PORT = process.env.PORT || 8000;
 
 const geoAPI = 'http://api.geonames.org/searchJSON?q=';
@@ -49,6 +51,23 @@ app.post('/weather', async(req,res)=>{
         .then(data => res.send(data))
         .catch(err => console.log(err,'error'));
 })
+
+app.post('/piximg', async(req,res)=>{
+    const a = req.body.city;
+    // const b = req.body.country;
+    // const city = urlencoded();
+    // const country = encodeURIComponent(b);
+    
+    // const text = `${city}+${country}`;
+    // console.log(city)
+    await fetch(`${apiPix}&q=${a}&image_type=photo&category=city`)
+        .then(response => response.json())
+        .then(data => res.send(data))
+        .catch(err => consolee.log(err,'error'));
+})
+
+
+
 
 
 

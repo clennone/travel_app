@@ -1,3 +1,4 @@
+
 export const getDates = (value) => {
     const year = value.substr(0,4)
     const month = value.substr(5,2);
@@ -32,7 +33,7 @@ export const betweenDates = (a,b) => {
     return transDays;
 }
 
-//validate if start and end days are the same to adjust 
+//validate if start and end days are the same to adjust 1 day to weatherapi
 export const sameDates = (a,b) => {
     const date1= new Date(a).getTime();
     const date2= new Date(b).getTime();
@@ -47,4 +48,13 @@ export const sameDates = (a,b) => {
     } else {
         return b;
     }
+}
+
+export const errorDates = (x,y) => {
+    const a = new Date(x).getTime();
+    const b = new Date(y).getTime();
+
+    if (b < a){
+        return true;
+    } 
 }
