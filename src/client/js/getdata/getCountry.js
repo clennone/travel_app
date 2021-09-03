@@ -12,12 +12,12 @@ export const getCountry = async (code) =>{
             } ;
 
             const text = `
-            Name of the City: ${city.name}
-            Capital: ${city.capital}
-            Currency; ${city.currency}
-            Population: ${city.population}
-            Region: ${city.region}
-            Subregion: ${city.subregion}`;
+            <p>Name of the City: ${city.name}</p>
+            <p>Capital: ${city.capital}</p>
+            <p>Currency; ${city.currency}</p>
+            <p>Population: ${city.population}</p>
+            <p>Region: ${city.region}</p>
+            <p>Subregion: ${city.subregion}</p>`;
             
             return text;
 }

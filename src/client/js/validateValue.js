@@ -1,28 +1,23 @@
 import { betweenDates, leftDates } from "./validateDates";
 
-const city = document.getElementById('city');
+const cityName = document.getElementById('city');
 const startDate = document.getElementById('start_date');
 const finalDate = document.getElementById('final_date');
 
 
-export const validateValue =  () =>{
-    if (city.value==='' || startDate.value.length===0 || finalDate.value.length===0){ 
-        alert('You must enter all the fields');
-    } else{
-        const cityName = city.value;
-        const initial = startDate.value;
-        const ending = finalDate.value;
+export const returnValues =  () =>{
+    const city = cityName.value;
+    const initial = startDate.value;
+    const ending = finalDate.value;
+    const daysLeft = leftDates(initial);
+    const daysBetween = betweenDates(initial,ending);
 
-        const daysLeft = leftDates(initial);
-        const daysIn = betweenDates(initial,ending);
-
-        return {
-            cityName,
-            initial,
-            ending,
-            daysLeft,
-            daysIn
-        }
+    return {
+        city,
+        initial,
+        ending,
+        daysLeft,
+        daysBetween
     }
 }
 

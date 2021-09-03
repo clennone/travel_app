@@ -1,32 +1,43 @@
+main{
+    margin-bottom: 10rem;
+}
 .card {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(30rem,1fr));
-    // grid-template-rows: auto;
     column-gap: 1rem;
     row-gap: 2.5rem;
     margin-top: 1rem;
-    
+    margin-bottom: 10rem;
     .card-data{
         display: grid;
         grid-template-areas:"img img"
+                            "dlf dlf"
                             "stay stay"
                             "cit cit"
                             "cst cend"
-                            "swe ewe"
+                            "wth wth"
                             "txt txt"
-                            "dlf dlf";
+                            "btn btn";
         row-gap: .5rem;
         border: 1px solid black;
+        border-radius: 20px;
         .city-img{
             grid-area: img;
-            // margin: 0;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            width: 100%;
+            height: 250px;
         }
         .stay-days{
             grid-area: stay;
-            font-size: .8rem;
+            font-size: 1.2rem;
             text-align: center;
             font-weight: bold;
             margin: 0;
+            padding: 0;
+            span {
+                color: red;
+            }
         }
         .city-name{
             grid-area: cit;
@@ -38,44 +49,24 @@
         }
         .city-start-date{
             grid-area: cst;
-            padding: .6rem;
-            font-size: 1rem;
-            text-align: center;
-            margin: 0;
-            border-right: 1px dotted black;
-            
         }
         .city-end-date{
             grid-area: cend;
+        }
+        .city-start-date,
+        .city-end-date{
             padding: .6rem;
             font-size: 1rem;
+            font-weight: bold;
             text-align: center;
             margin: 0;
+            border-bottom: 1px solid black;
         }
-        .start-weather{
-            grid-area: swe;
+        .weather{
+            grid-area: wth;
             padding: .8rem;
             margin: 0;
-            border-right: 1px dotted black;
-
-            .start-title{
-                font-size: 1rem;
-                text-align: center;
-                margin: 0;
-                text-decoration-line: underline;
-            }
-            p{
-                font-size: 1rem;
-                font-weight: bold;
-                margin: 0;
-                text-align: center;
-            }
-        }
-        .end-weather{
-            grid-area: ewe;
-            padding: .8rem;
-            margin: 0;
-            .end-title{
+            .weather-title{
                 font-size: 1rem;
                 text-align: center;
                 margin: 0;
@@ -95,7 +86,6 @@
             line-height: 2rem;
             text-align: center;
             border-top: 1px dotted black;
-            border-bottom: 1px dotted black;
             
         }
         .days-left{
@@ -105,9 +95,12 @@
             font-weight: bold;
             font-style: italic;
             color: red;
-            // padding: 0 .2rem 0 0 ;
             margin: 0;
+        }
+        .dlt_btn{
+            grid-area: btn;
         }
     }
     
 }
+
