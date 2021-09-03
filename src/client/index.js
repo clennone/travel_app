@@ -1,4 +1,4 @@
-import { deleteCard, getIt } from './js/app'
+import { getIt } from './js/app'
 
 import './styles/normalize.scss'
 import './styles/_base.scss'
@@ -10,7 +10,4 @@ import './styles/_card.scss'
 
 getIt();
 
-export{
-    getIt
-}
 

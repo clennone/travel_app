@@ -28,8 +28,6 @@ function getIt() {
             const weatherData = await getWeather(geo);
             const img = await getImage(city,geo.geoCountry);
             const text = await getCountry(geo.geoCode);
-            console.log(weatherData);
-
             const data = {
                 img,
                 daysBetween,
@@ -44,15 +42,21 @@ function getIt() {
                 hum: weatherData.data[0].rh,
             }
             
-            createDiv(data);
-                 
+            const dataCard = await createDiv(data);
+
+            const card = document.getElementById('card-info');
+            const divCard = document.createElement('div');
+            divCard.className = 'card-data';
+            divCard.innerHTML = dataCard;
+            card.insertAdjacentElement('afterbegin',divCard); 
+
             cleanValue();
-
         }
-
-        
     })
+    
+    
 }
+
 
 
 export {
