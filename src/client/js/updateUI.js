@@ -16,7 +16,8 @@ export const createDiv = (data) => {
     <p class="humidity">Humidity: ${data.hum}</p>
     </div>
     <div class="city-context">${data.text}</div>
-    <p class="days-left">Days left to plan: ${data.daysLeft} days</p>`;
+    <p class="days-left">Days left to plan: ${data.daysLeft} days</p>
+    <button onclick="deleteCard()">Try it</button>`;
 
     divCard.className = 'card-data';
     divCard.innerHTML = contentCard;

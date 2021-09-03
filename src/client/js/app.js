@@ -8,7 +8,7 @@ import { getCountry } from "./getdata/getCountry";
 import { createDiv } from "./updateUI";
 
 const btnSubmit = document.getElementById('btn_submit');
-const deleteBtn = document.getElementByClass('dlt_btn');
+
 
 function getIt() {
     btnSubmit.addEventListener('click',async function(e){
@@ -45,9 +45,7 @@ function getIt() {
             }
             
             createDiv(data);
-
-
-            
+                 
             cleanValue();
 
         }
@@ -55,8 +53,6 @@ function getIt() {
         
     })
 }
-
-
 
 
 export {

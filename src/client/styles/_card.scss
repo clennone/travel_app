@@ -97,8 +97,20 @@ main{
             color: red;
             margin: 0;
         }
-        .dlt_btn{
+        .btn-dlt{
             grid-area: btn;
+            color: white;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: 1s;
+            cursor: pointer;
+            &:hover{
+                background-color: black;
+                transition: 1s;
+            }
         }
     }
     
