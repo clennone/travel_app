@@ -23,15 +23,13 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 app.use(express.static('dist'));
 
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => console.log(`APP Travel start on server ${PORT}`));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve("dist/index.html"));
 })
 
-// route for test server
-app.get('/test', async (req, res) => {
-    res.json({ msg: 'pass!' })
- })
 
 //POST AND FETCH ROUTES
 
@@ -62,4 +60,3 @@ app.post('/piximg', async(req,res)=>{
 })
 
 
-module.exports = app;
