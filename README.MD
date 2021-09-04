@@ -1,21 +1,20 @@
 #TRAVEL APP 
-
+***
 <img src = "./src/client/assets/images/img-demo.png"/>
 
 ## Description: 
 APP can take three inputs from the user: 
-<hr>
+
     - City
     - Start Date
     - Finish Date
-</hr>
+
 This will make asynchronous fetch into different calls from 4 API's that will make a DIV card with all the data in just one step.
 
 This APP is responsive and will work great in any device.
 
 ## Start Requirement: 
 You can try the app:
-<hr>
     1. Clone the repo
     2. Install or update node and NPM
     3. Remember to make your ".env" file with the KEYS from the API's
@@ -23,15 +22,13 @@ You can try the app:
     5. The port where you can start the app is in "http://localhost:8000/"
     6. You can use Webpack in DEV or PROD buils
     7. Use NPM TEST for the test enviroment
-</hr>
 
 ## API's:
 The API's that are chosen for this project are:
-<hr>
     1. GeoNames "https://www.geonames.org"
     2. WeatherBit  "https://www.weatherbit.io"
     3. Pixbay "https://pixabay.com"
     4. RestCountr "https://restcountries.eu"
-</hr>
+
 This API's work asynchrounus to make the calls and fetch the data neccesary for the NEXT API
 
