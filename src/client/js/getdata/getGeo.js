@@ -1,6 +1,6 @@
 export const getGeo =  async(city) => {
     
-    const response = await fetch ('http://localhost:8000/geoname', {
+    const response = await fetch ('https://localhost:8000/geoname', {
     method: 'POST',
     credentials: 'same-origin',
     headers: { 

@@ -1,6 +1,6 @@
 
 export const getImage = async (city,country) => {
-    const response = await fetch('http://localhost:8000/piximg',{
+    const response = await fetch('https://localhost:8000/piximg',{
         method: 'POST',
         credentials: 'same-origin',
         headers: {
