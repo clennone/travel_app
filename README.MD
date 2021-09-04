@@ -8,11 +8,11 @@ APP can take three inputs from the user:
     - City
     - Start Date
     - Finish Date
-
+```
 This will make asynchronous fetch into different calls from 4 API's that will make a DIV card with all the data in just one step.
 
 This APP is responsive and will work great in any device.
-```
+***
 ### Start Requirement: 
 You can try the app:
 ```
@@ -24,6 +24,7 @@ You can try the app:
     6. You can use Webpack in DEV or PROD buils
     7. Use NPM TEST for the test enviroment
 ```
+***
 ### API's:
 The API's that are chosen for this project are:
 ```
