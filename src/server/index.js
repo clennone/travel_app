@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 app.use(express.static('dist'));
 
+app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve("dist/index.html"));
