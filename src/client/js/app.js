@@ -28,9 +28,7 @@ async function catchInfo() {
             const weatherData = await getWeather(geo);
             const img = await getImage(city,geo.geoCountry);
             const text = await getCountry(geo.geoCode);
-            console.log(geo)
-            console.log(weatherData)
-            console.log(img)
+
             const data = {
                 img,
                 daysBetween,
