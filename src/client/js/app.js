@@ -7,10 +7,10 @@ import { getImage } from "./getdata/getImage";
 import { getCountry } from "./getdata/getCountry";
 import { createDiv } from "./updateUI";
 
-const btnSubmit = document.getElementById('btn_submit');
 
 
-function getIt() {
+function catchInfo() {
+    const btnSubmit = document.getElementById('btn_submit');
     btnSubmit.addEventListener('click',async function(e){
         e.preventDefault();
 
@@ -24,6 +24,11 @@ function getIt() {
             alert('Finish date has to be after the start date')
             cleanFinaldate();
         }else{
+            const mainData = document.getElementById('main');
+            const loader = document.getElementById('loader');
+            loader.classList.remove('display-none')
+            loader.classList.add('display-on')
+
             const geo = await getGeo(city);
             const weatherData = await getWeather(geo);
             const img = await getImage(city,geo.geoCountry);
@@ -40,25 +45,32 @@ function getIt() {
                 temp: weatherData.data[0].temp,
                 pres: weatherData.data[0].pres,
                 hum: weatherData.data[0].rh,
+                code: weatherData.data[0].weather.icon
             }
+
+            createDiv(data);
             
-            const dataCard = await createDiv(data);
+            setTimeout( () => {
+                cleanValue(city,initial,ending);
+                loader.classList.remove('display-on')
+                loader.classList.add('display-none')
+                mainData.classList.remove('display-none')
+                pushScroll();
+            },1000);
 
-            const card = document.getElementById('card-info');
-            const divCard = document.createElement('div');
-            divCard.className = 'card-data';
-            divCard.innerHTML = dataCard;
-            card.insertAdjacentElement('afterbegin',divCard); 
-
-            cleanValue();
         }
+
+
     })
-    
-    
 }
 
-
+function pushScroll () {
+    const head = document.querySelector('.header');
+    let headPos = head.getBoundingClientRect();
+    let headbtm = headPos.bottom;
+    window.scrollTo({top: headbtm, behavior:'smooth'});
+}
 
 export {
-    getIt
+    catchInfo
 }

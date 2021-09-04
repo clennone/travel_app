@@ -13,10 +13,6 @@
                 <a href="index.html" class="logo">
                     <h1 class="name no-margin center-text">Travel<span class="name__bold">app</span></h1>
                 </a>
-
-                <nav class="nav">
-                    <a href="#" class="nav__links name__bold">Favorite</a>
-                </nav>
             </div>
         </div>
         <div class="header__text">
@@ -38,14 +34,15 @@
                         <input class="input date" id="final_date" name="final_date" type="date" required>
                     </div>
                     <div class="field__4">
-                        <button id="btn_submit" type="submit" class="btn">Look the trip</button></a>
+                        <button id="btn_submit" type="submit" class="btn">Search your adventure!</button></a>
                     </div>
                 </div>
             </form>
         </section> <!--destiny closer-->
+        <div id="loader" class="loader display-none"></div>
     </header>
-    <main class="container no-show">
-        <div class="spinner"></div>
+    <main class="container display-none" id="main">
+        <div><h3>Your travels: </h3></div>
         <section class="card" id="card-info">            
         </section>
     </main> <!--main closer-->

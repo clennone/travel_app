@@ -1,11 +1,12 @@
 import { betweenDates, leftDates } from "./validateDates";
 
-const cityName = document.getElementById('city');
-const startDate = document.getElementById('start_date');
-const finalDate = document.getElementById('final_date');
-
 
 export const returnValues =  () =>{
+
+    const cityName = document.getElementById('city');
+    const startDate = document.getElementById('start_date');
+    const finalDate = document.getElementById('final_date');
+
     const city = cityName.value;
     const initial = startDate.value;
     const ending = finalDate.value;
@@ -22,7 +23,10 @@ export const returnValues =  () =>{
 }
 
 export const cleanValue = () =>{
-    city.value='';
+    const cityName = document.getElementById('city');
+    const startDate = document.getElementById('start_date');
+    const finalDate = document.getElementById('final_date');
+    cityName.value='';
     startDate.value='';
     finalDate.value='';
 }

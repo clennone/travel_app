@@ -2,7 +2,7 @@
 
 .header {
     background-image: url(../assets/images/travel-app-1.jpg);
-    height: 70rem;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -38,22 +38,5 @@
         justify-content: space-between;
         align-items: center;
     }
-    .nav {
-        display: flex;
-        gap: 2rem;
-
-    }
 }
 
-.nav__links{
-    display: block;
-    text-align: center;
-    font-size: 1.8rem;
-    color: base.$color-border;
-    transition: 1s;
-    &:hover{
-        color: base.$color-bckg;
-        transition: 2s;
-    }
-    
-}
