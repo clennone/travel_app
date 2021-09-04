@@ -8,7 +8,14 @@ import './styles/_form.scss'
 import './styles/_header.scss'
 import './styles/_card.scss'
 
-catchInfo();
+document.addEventListener('DOMContentLoaded', () => {
+    const btnSubmit = document.getElementById('btn_submit');
+
+    btnSubmit.addEventListener('click', function(e){
+        e.preventDefault();
+        catchInfo();
+    });
+});
 
 
 export{

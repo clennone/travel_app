@@ -9,12 +9,7 @@ import { createDiv } from "./updateUI";
 
 
 
-function catchInfo() {
-    const btnSubmit = document.getElementById('btn_submit');
-    btnSubmit.addEventListener('click',async function(e){
-        e.preventDefault();
-
-
+async function catchInfo() {
         let {city,initial,ending,daysLeft,daysBetween} = returnValues();
         
  
@@ -59,9 +54,6 @@ function catchInfo() {
             },1000);
 
         }
-
-
-    })
 }
 
 function pushScroll () {
@@ -72,5 +64,6 @@ function pushScroll () {
 }
 
 export {
-    catchInfo
+    catchInfo,
+    pushScroll
 }

@@ -8,8 +8,7 @@ export const getImage = async (city,country) => {
             'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify({
-            'city':city,
-            'country':country
+            'city':city
         })
     })
     try{

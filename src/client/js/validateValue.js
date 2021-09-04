@@ -32,5 +32,6 @@ export const cleanValue = () =>{
 }
 
 export const cleanFinaldate = () => {
+    const finalDate = document.getElementById('final_date');
     finalDate.value='';
 }

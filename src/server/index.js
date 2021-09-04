@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-const PORT = process.env.PORT || 8000;
+
 
 const geoAPI = 'http://api.geonames.org/searchJSON?q=';
 const geoUser = process.env.API_USER;
@@ -23,11 +23,17 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 app.use(express.static('dist'));
 
-app.listen(PORT, () => console.log(`APP Travel start on server ${PORT}`));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve("dist/index.html"));
 })
+
+// route for test server
+app.get('/test', async (req, res) => {
+    res.json({ msg: 'pass!' })
+ })
+
+//POST AND FETCH ROUTES
 
 app.post('/geoname', async(req,res)=>{
     const text = req.body.city;
@@ -56,11 +62,4 @@ app.post('/piximg', async(req,res)=>{
 })
 
 
-
-
-
-
-
-  
-
-
+module.exports = app;
