@@ -1,10 +1,10 @@
 export const getWeather = async (data) =>{
-    const response = await fetch('https://localhost:8000/weather',{
+    const response = await fetch('http://localhost:8000/weather',{
             method: 'POST',
             credentials: 'same-origin',
             headers: {
                 'Content-Type' : 'application/json',
-                'Access-Control-Allow-Origin' : '*'
+                // 'Access-Control-Allow-Origin' : '*'
             },
             body: JSON.stringify(data)
         });

@@ -1,5 +1,5 @@
 export const getCountry = async (code) =>{
-    const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${code}`);
+    const response = await fetch(`http://restcountries.eu/rest/v2/alpha/${code}`);
             const data = await response.json();
 
             const city = {
