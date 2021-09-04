@@ -1,6 +1,6 @@
 # TRAVEL APP 
 ***
-referential image
+APP IMAGE
 <img src = "./src/client/assets/images/img-demo.png"/>
 
 ## Description: 
