@@ -4,7 +4,7 @@ Screenshot from APP
 <img src = "./src/client/assets/images/img-demo.png"/>
 
 ## Description: 
-APP can take three inputs from the user: 
+The next inputs are required to submit
 ```
     - City
     - Start Date
