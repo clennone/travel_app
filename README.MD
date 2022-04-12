@@ -16,7 +16,7 @@ The data will return into a CARD in the HTML project to show the client the info
 This APP is responsive and will work great in any device.
 ***
 ### Start Requirement: 
-You can try the app:
+Try the following steps:
 ```
     1. Clone the repo
     2. Install or update node and NPM
