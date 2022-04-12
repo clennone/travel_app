@@ -10,7 +10,7 @@ The next inputs are required to submit
     - Start Date
     - Finish Date
 ```
-This will make asynchronous fetch into different calls from 4 API's that will make a DIV card with all the data in just one step.
+This will make asynchronous fetch into different calls from 4 API's, making an element DIV with all the data in just one step.
 The data will return into a CARD in the HTML project to show the client the info of the travel plan.
 
 This APP is responsive and will work great in any device.
