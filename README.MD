@@ -28,12 +28,12 @@ You can try the app:
 ```
 ***
 ### API's:
-The API's that are chosen for this project are:
+This project works with the next API's:
 ```
     1. GeoNames "https://www.geonames.org"
     2. WeatherBit  "https://www.weatherbit.io"
     3. Pixbay "https://pixabay.com"
     4. RestCountr "https://restcountries.eu"
 ```
-This API's work asynchrounus to make the calls and fetch the data neccesary for the NEXT API
+This API's work asynchrounus to make the calls and fetch the data neccesary
 
